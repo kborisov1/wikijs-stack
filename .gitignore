@@ -1,0 +1,15 @@
+# Docker runtime data
+db-data/
+grafana_data/
+prometheus_data/
+
+# Certificates
+certbot/
+*.crt
+*.key
+*.pem
+
+# Logs
+*.log
+*.bak
+.env
