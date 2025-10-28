@@ -12,7 +12,7 @@ This repo contains a full Docker Compose setup for:
 ## How to start
 
 1. Clone the repo:
-   git clone https://github.com/kborisov1/wikijs-stack.git
+   git clone https://github.com/kborisov1/wikijs-stack
 2. Enter the folder:
    cd wikijs-stack
 3. Start all services:
