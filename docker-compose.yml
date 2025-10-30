@@ -25,8 +25,8 @@ services:
       DB_USER: wiki
       DB_PASS: wikijsrocks
       DB_NAME: wiki
-    expose:
-      - "3000"
+    ports:
+      - "3000:3000"
 
   # Nginx
   nginx:
@@ -38,10 +38,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      # Uncomment these if you add HTTPS certs
-      # - ./certbot/www:/var/www/certbot
-      # - ./certbot/conf:/etc/letsencrypt
+      - ./conf.d:/etc/nginx/conf.d:Z
 
   # Prometheus
   prometheus:
@@ -50,7 +47,8 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:Z
+      - ./data:/prometheus:Z
 
   #  Node Exporter
   node-exporter:
