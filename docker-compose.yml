@@ -43,6 +43,7 @@ services:
   # Prometheus
   prometheus:
     image: prom/prometheus:latest
+    user: root 
     restart: unless-stopped
     ports:
       - "9090:9090"
