@@ -1,0 +1,18 @@
+{
+	"ulid": "01K9013J2CG1022ZR550AAJQ65",
+	"minTime": 1761854400000,
+	"maxTime": 1761861600000,
+	"stats": {
+		"numSamples": 3691765,
+		"numFloatSamples": 3691765,
+		"numSeries": 7347,
+		"numChunks": 35500
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01K9013J2CG1022ZR550AAJQ65"
+		]
+	},
+	"version": 1
+}

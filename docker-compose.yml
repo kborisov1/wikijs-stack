@@ -28,18 +28,6 @@ services:
     ports:
       - "3000:3000"
 
-  # Nginx
-  nginx:
-    image: nginx:latest
-    restart: unless-stopped
-    depends_on:
-      - wiki
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./conf.d:/etc/nginx/conf.d:Z
-
   # Prometheus
   prometheus:
     image: prom/prometheus:latest
